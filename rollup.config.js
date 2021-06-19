@@ -8,16 +8,19 @@ import typescript2 from 'rollup-plugin-typescript2';
 // import url from 'postcss-url';
 
 const inputs = [{
-  "Popup/index": 'src/Popup/index.tsx',
+  'Popup/index': 'src/Popup/index.tsx',
+  external: [path.resolve(__dirname, 'src/Mask/index.tsx')]
+}, {
+    'Mask/index': 'src/Mask/index.tsx',
+    external: []
 }];
-const external = [
-  path.resolve(__dirname, 'src/Mask/index.tsx'),
-];
 
-console.log('external___', external);
+// console.log('external___', external);
 
 const configs =
   inputs.map(input => {
+      const external = input.external;
+      delete input.external;
     // const { cssPath, filePath } = input;
     // const extraPath = `./es/${cssPath}/index.css`;
     // delete input.cssPath;

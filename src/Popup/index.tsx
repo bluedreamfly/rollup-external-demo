@@ -1,3 +1,3 @@
 import Mask from '../Mask';
 
-console.log('Mask', Mask);
+console.log('Mask', (new Mask).test());
