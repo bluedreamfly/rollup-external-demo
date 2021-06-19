@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "alwaysStrict": true,
+        "strict": true,
+        "allowSyntheticDefaultImports": true,
+        "jsx": "react",
+        "allowJs": true,
+        "checkJs": false,
+        "declaration": true
+    },
+    "include": [
+        "src/**/*"
+    ]
+}
